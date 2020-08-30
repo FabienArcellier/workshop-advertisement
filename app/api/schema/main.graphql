@@ -1,5 +1,6 @@
 type Query {
     advertisements(research: String!): Advertisement!
+    likes: [Like!]!
 }
 
 type Mutation {
@@ -11,4 +12,9 @@ type Advertisement {
     title: String!
     description: String!
     thumbnail: String!
+}
+
+type Like {
+    title: String!
+    count: Int!
 }

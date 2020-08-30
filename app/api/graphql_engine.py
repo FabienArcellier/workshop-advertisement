@@ -5,6 +5,7 @@ from ariadne import make_executable_schema, gql
 from graphql import GraphQLSchema
 
 from app.api.type_resolver.advertisement import advertisement
+from app.api.type_resolver.mutation import mutation
 from app.api.type_resolver.query import query
 
 
@@ -20,6 +21,7 @@ class GraphqlEngine:
 
     def registry_types(self):
         self.types.append(query)
+        self.types.append(mutation)
         self.types.append(advertisement)
 
     def _load_schema(self) -> str:
