@@ -1,0 +1,14 @@
+type Query {
+    advertisements(research: String!): Advertisement!
+}
+
+type Mutation {
+    like(title: String!): Boolean
+}
+
+type Advertisement {
+    url: String!
+    title: String!
+    description: String!
+    thumbnail: String!
+}
