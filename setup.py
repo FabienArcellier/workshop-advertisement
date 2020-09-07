@@ -12,6 +12,7 @@ setup(
     install_requires=[
         'ariadne',
         'flask',
+        'flask-cors',
         'gunicorn'
     ],
     extras_require={

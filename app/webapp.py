@@ -5,10 +5,12 @@ from ariadne import graphql_sync
 from ariadne.constants import PLAYGROUND_HTML
 from flask import Flask, request, jsonify, send_file
 from flask import render_template
+from flask_cors import CORS
 
 from app.api.graphql_engine import GraphqlEngine
 
 app = Flask(__name__)
+CORS(app)
 
 graphql_engine = GraphqlEngine()
 schema = graphql_engine.schema()
